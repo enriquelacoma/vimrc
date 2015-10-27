@@ -39,6 +39,7 @@ set cursorline
 syntax enable
 
 set background=light
+colorscheme Monokai
 
 " Syntastic config
 set statusline+=%#warningmsg#
@@ -51,5 +52,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
 
+let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=php,module,inc,install,test,profile,theme'
 
 let g:airline#extensions#tabline#enabled = 1
