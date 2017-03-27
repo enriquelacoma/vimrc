@@ -55,6 +55,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=php,module,inc,install,test,profile,theme'
+let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=js,php,module,inc,install,test,profile,theme'
+"let g:syntastic_php_phpcs_args = '--standard=DrupalPractice --report=csv --extensions=php,module,inc,install,test,profile,theme'"
+let g:syntastic_javascript_checkers = ['phpcs']
+let g:syntastic_javascript_phpcs_args = '--standard=Drupal --report=csv --extensions=js'
 
 let g:airline#extensions#tabline#enabled = 1
