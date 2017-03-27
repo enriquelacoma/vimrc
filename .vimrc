@@ -16,6 +16,12 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
+Plugin 'gregsexton/gitv'
+Plugin 'FuzzyFinder'
+Plugin 'L9'
+
 
 
 " All of your Plugins must be added before the following line
@@ -38,11 +44,13 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 set cursorline
+set autoread
 
 syntax enable
 
 set background=light
 colorscheme Monokai
+"colorscheme zenburn"
 
 " Syntastic config
 set statusline+=%#warningmsg#
@@ -55,9 +63,22 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
 
-let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=js,php,module,inc,install,test,profile,theme'
+let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=php,module,inc,install,test,profile,theme'
 "let g:syntastic_php_phpcs_args = '--standard=DrupalPractice --report=csv --extensions=php,module,inc,install,test,profile,theme'"
-let g:syntastic_javascript_checkers = ['phpcs']
-let g:syntastic_javascript_phpcs_args = '--standard=Drupal --report=csv --extensions=js'
+"let g:syntastic_javascript_checkers = ['phpcs']"
+"let g:syntastic_javascript_phpcs_args = '--standard=Drupal --report=csv --extensions=js'"
+
+let s:defaultCheckers = {
+        \ 'javascript': ['phpcs'],
+      \ }
+
+
 
 let g:airline#extensions#tabline#enabled = 1
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-n>'
+"let g:multi_cursor_prev_key='<C-p>'"
+"let g:multi_cursor_skip_key='<C-x>'"
+"let g:multi_cursor_quit_key='<Esc>'"
+
