@@ -1,7 +1,4 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -21,7 +18,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'gregsexton/gitv'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
-
+Plugin 'sickill/vim-monokai'
+Plugin 'tomasr/molokai'
 
 
 " All of your Plugins must be added before the following line
@@ -64,8 +62,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
 
 let g:syntastic_php_checkers=['php', 'phpcs', 'phpmd']
-let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=php,module,inc,install,test,profile,theme'
-"let g:syntastic_php_phpcs_args = '--standard=DrupalPractice --report=csv --extensions=php,module,inc,install,test,profile,theme'"
+"let g:syntastic_php_phpcs_args = '--standard=Drupal --report=csv --extensions=php,module,inc,install,test,profile,theme'"
+let g:syntastic_php_phpcs_args = '--standard=DrupalPractice --report=csv --extensions=php,module,inc,install,test,profile,theme'
 "let g:syntastic_javascript_checkers = ['phpcs']"
 "let g:syntastic_javascript_phpcs_args = '--standard=Drupal --report=csv --extensions=js'"
 
