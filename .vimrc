@@ -20,6 +20,7 @@ Plugin 'FuzzyFinder'
 Plugin 'L9'
 Plugin 'sickill/vim-monokai'
 Plugin 'tomasr/molokai'
+Plugin 'fatih/vim-go'
 
 
 " All of your Plugins must be added before the following line
